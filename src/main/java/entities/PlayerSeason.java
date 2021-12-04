@@ -7,7 +7,7 @@ import javax.persistence.*;
 @Entity
 public class PlayerSeason implements BaseEntity<PlayerSeasonId> {
     @EmbeddedId
-    private PlayerSeasonId id;
+    private PlayerSeasonId id = new PlayerSeasonId();
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "player_id")
@@ -69,5 +69,16 @@ public class PlayerSeason implements BaseEntity<PlayerSeasonId> {
 
     public Long getSalary() {
         return salary;
+    }
+
+    @Override
+    public String toString() {
+        return "PlayerSeason{" +
+                "id=" + id +
+                ", player=" + player +
+                ", season=" + season +
+                ", team=" + team +
+                ", salary=" + salary +
+                '}';
     }
 }

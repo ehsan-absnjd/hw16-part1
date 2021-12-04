@@ -12,11 +12,11 @@ public class MainMenu {
         MainMenuHelper helper = new MainMenuHelper();
         int command;
         do {
-            System.out.println("1)show the most payed coach" +
-                    "2)show the most payed players per season" +
-                    "3)show the each city and its teams" +
-                    "4)show each teams point per season" +
-                    "5)show the champion per season" +
+            System.out.println("1)show the most payed coach\n" +
+                    "2)show the most payed players per season\n" +
+                    "3)show the each city and its team counts\n" +
+                    "4)show each teams point per season\n" +
+                    "5)show the champion per season\n" +
                     "6)exit");
             command = sc.getInt();
             switch (command){

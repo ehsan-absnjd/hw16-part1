@@ -7,7 +7,7 @@ import javax.persistence.*;
 @Entity
 public class MatchPlayer implements  BaseEntity<MatchPlayerId> {
     @EmbeddedId
-    private MatchPlayerId id;
+    private MatchPlayerId id = new MatchPlayerId();
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "match_id")

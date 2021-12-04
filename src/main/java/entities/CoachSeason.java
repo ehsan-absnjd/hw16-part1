@@ -7,7 +7,7 @@ import javax.persistence.*;
 @Entity
 public class CoachSeason implements BaseEntity<CoachSeasonId> {
     @EmbeddedId
-    private CoachSeasonId id;
+    private CoachSeasonId id = new CoachSeasonId();
 
     @ManyToOne(cascade = CascadeType.ALL )
     @JoinColumn(name = "coach_id")
