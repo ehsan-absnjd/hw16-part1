@@ -10,4 +10,7 @@ public class SingletonEntityManager {
     public static EntityManager getEntityManager(){
         return entityManager;
     }
+    public static void close(){
+        entityManager.close();
+    }
 }
